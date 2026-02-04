@@ -46,7 +46,7 @@ def test(G, test_samles_dir='test/test_samples/', save_path='test/result'):
         end_time = time.time()
         globle_limit = 60  # minute
         music_sr = 90
-        motion = np.zeros([int(mel.size()[1] / (music_sr / 30)) + 1, 13, 2])
+        motion = np.zeros([int(mel.size()[1] / (music_sr / 30)) + 1, 22, 3])
         for split in range(min(globle_limit, int(mel.size()[1] / 60 / music_sr) + 1)):
             if (split + 1) * 60 * music_sr <= mel.shape[1]:
                 mel_step = mel[:, split * 60 * music_sr: (split + 1) * 60 * music_sr, :]
