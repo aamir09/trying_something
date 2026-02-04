@@ -2,7 +2,7 @@ import os
 import time
 import numpy as np
 import torch
-from moviepy.editor import VideoFileClip, AudioFileClip
+# from moviepy.editor import VideoFileClip, AudioFileClip
 from models.Generator import Generator
 import torch.utils.data as Data
 from utils.music_utils import extract_mel_feature
