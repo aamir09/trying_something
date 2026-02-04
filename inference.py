@@ -63,7 +63,7 @@ def test(G, test_samles_dir='test\\test_samples\\', save_path='test/result'):
             motion[split * 60 * 30:split * 60 * 30 + fake_step.shape[0], :, :] = fake_step
         print(f'motion generated in {round(time.time()-end_time,2)} seconds')
         print('rendering video...')
-        with open(os.join(save_path, name+'.npy'), 'wb') as f
+        with open(os.join(save_path, name+'.npy'), 'wb') as f:
             print(f'Saving Motion with shape, {motion.shape}')
             np.save(motion, f)
         # saved_video_file = vis_motion([motion], save_path=save_path, name=name)
