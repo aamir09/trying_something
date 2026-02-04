@@ -39,7 +39,7 @@ def plot_3d_motion(
         xz_plane.set_facecolor((0.5, 0.5, 0.5, 0.5))
         ax.add_collection3d(xz_plane)
 
-    data = joints.copy().reshape(len(joints), -1, 3)
+    data = joints.copy()
     frame_number = data.shape[0]
 
     fig = plt.figure(figsize=figsize)
